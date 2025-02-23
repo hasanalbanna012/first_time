@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'appbody.dart'; // Import the new BottomNavBar widget
+import 'appbody.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter App'),
         ),
-        bottomNavigationBar: const BottomNavBar(), // Use the BottomNavBar widget
+        bottomNavigationBar: const BottomNavBar(),
         drawer: Drawer(
           child: ListView(
             children: [

@@ -12,10 +12,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items:[
-          BottomNavigationBarItem(icon: Icon(Icons.home),
-          label: "Home",),
-        ] ),
+        appBar: AppBar(
+          title: Text('Flutter App'),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
+          ],
+          currentIndex: 0, // Set the initial selected index
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
+        ),
         drawer: Drawer(
           child: ListView(
             children: [
@@ -37,7 +56,10 @@ class MyApp extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.home),
                 title: Text("Home"),
-                trailing: ElevatedButton(onPressed: () {}, child: Text("theme"),),
+                trailing: ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Theme"),
+                ),
                 onTap: () {},
               )
             ],
